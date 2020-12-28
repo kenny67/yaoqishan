@@ -33,7 +33,7 @@ jobs:
 
     - uses: papeloto/action-zip@v1
       with:
-        files: target/yaoqishan.war .github/workflows/dev/
+        files: target/yaoqishan.war appspec.yml scripts/
         recursive: false
         dest: yaoqishan.zip
     
