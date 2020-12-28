@@ -29,11 +29,11 @@ jobs:
       uses: actions/upload-artifact@v1
       with: 
         name: yaoqishan
-        path: ./target/yaoqishan.war
+        path: target/yaoqishan.war
 
     - uses: papeloto/action-zip@v1
       with:
-        files: ./yaoqishan/target/yaoqishan.war  ./yaoqishan/.github/workflows/dev/
+        files: ${{ github.workspace }}/target/yaoqishan.war ./yaoqishan/.github/workflows/dev/
         recursive: false
         dest: yaoqishan.zip
     
@@ -48,4 +48,3 @@ jobs:
         S3_UPLOAD_BUCKET: skm-deploy-war
       run: |
         aws s3 cp  yaoqishan.zip s3://$S3_UPLOAD_BUCKET/backend/ --quiet
-
