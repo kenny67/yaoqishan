@@ -33,7 +33,7 @@ jobs:
 
     - uses: papeloto/action-zip@v1
       with:
-        files: target/yaoqishan.war ./yaoqishan/.github/workflows/dev/
+        files: target/yaoqishan.war  .github/workflows/dev/
         dest: target/yaoqishan.zip
     
     - name: Configure AWS credentials
