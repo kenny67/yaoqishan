@@ -46,5 +46,5 @@ jobs:
       env: 
         S3_UPLOAD_BUCKET: skm-deploy-war
       run: |
-        aws s3 cp target/yaoqishan.zip s3://$S3_UPLOAD_BUCKET/backend/ --quiet
+        aws s3 cp  yaoqishan.zip s3://$S3_UPLOAD_BUCKET/backend/ --quiet
 
