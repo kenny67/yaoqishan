@@ -29,12 +29,12 @@ jobs:
       uses: actions/upload-artifact@v1
       with: 
         name: yaoqishan
-        path: target/yaoqishan.war
+        path: ./target/yaoqishan.war
 
     - uses: papeloto/action-zip@v1
       with:
-        files: target/yaoqishan.war  .github/workflows/dev/
-        dest: target/yaoqishan.zip
+        files: ./target/yaoqishan.war  ./.github/workflows/dev/
+        dest: yaoqishan.zip
     
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
